@@ -1,0 +1,50 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+/* style the humburger icon */
+
+.humburger {
+	position: relative;
+	width: 45px;
+	height: 34px;
+	transition: all 0.3s ease-in-out;
+}
+
+.humburger span {
+	position: absolute;
+	height: 8px;
+	width: 100%;
+	border-radius: 4px;
+	background-color: rgb(73, 73, 73);
+
+	top: 0;
+	transition: transform 0.2s ease-in-out, opacity 0.2s ease-in;
+}
+.humburger span:nth-child(1) {
+	top: 0px;
+}
+.humburger span:nth-child(2),
+.humburger span:nth-child(3) {
+	top: 13px;
+}
+.humburger span:nth-child(4) {
+	top: 26px;
+}
+
+/* create active state in javascript*/
+.humburger.active span:nth-child(1),
+.humburger.active span:nth-child(4) {
+	opacity: 0;
+}
+
+.humburger.active span:nth-child(2) {
+	transform: rotate(45deg);
+}
+
+.humburger.active span:nth-child(3) {
+	transform: rotate(-45deg);
+}
